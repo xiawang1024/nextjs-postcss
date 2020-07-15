@@ -1,0 +1,20 @@
+@import '~styles/common/mixin';
+.title {
+  line-height: 2;
+  font-weight: bold;
+  font-size: 24px;
+}
+.box-16-9 {
+  margin-top: 30px;
+  width: 100%;
+
+  @include aspect-ratio($aspectX: 16, $aspectY: 9);
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+}
