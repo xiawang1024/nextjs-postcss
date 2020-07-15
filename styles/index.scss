@@ -1,0 +1,21 @@
+@import './common/mixin';
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    width: 100%;
+    text-align: center;
+  }
+  .box {
+    width: 100%;
+
+    @include aspect-ratio($aspectX: 16, $aspectY: 9);
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
