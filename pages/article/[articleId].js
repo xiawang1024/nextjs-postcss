@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 const DEMO_URL =
   'https://pubmob.dianzhenkeji.com/cms/articles?tenantId=henanradio&channelId=1216567500624498688&pageNo=1&pageSize=50'
 const DETAIL_URL =
@@ -9,6 +11,9 @@ export default function ArticleDetail({ data }) {
   }
   return (
     <div>
+      <Head>
+        <title>{data.articleTitle}</title>
+      </Head>
       <h1 className="title">{data.articleTitle}</h1>
       <div
         className="rich-text"

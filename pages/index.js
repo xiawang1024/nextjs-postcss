@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Demo from '@/components/demo/index'
+import Router from 'next/router'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
 
       <main>
         <Demo />
+        <button onClick={() => Router.push('/article')}> to article </button>
       </main>
       <style jsx>{`
         main {
