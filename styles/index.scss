@@ -7,3 +7,17 @@
   align-items: center;
   box-sizing: border-box;
 }
+
+a {
+  color: #333;
+}
+
+.rich-text {
+  img {
+    max-width: 100%;
+  }
+  video,
+  audio {
+    width: 100%;
+  }
+}
