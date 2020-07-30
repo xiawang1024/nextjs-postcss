@@ -23,17 +23,15 @@ module.exports = {
     },
   ],
 
-  // deploy: {
-  //   production: {
-  //     user: 'SSH_USERNAME',
-  //     host: 'SSH_HOSTMACHINE',
-  //     ref: 'origin/master',
-  //     repo: 'GIT_REPOSITORY',
-  //     path: 'DESTINATION_PATH',
-  //     'pre-deploy-local': '',
-  //     'post-deploy':
-  //       'npm install && pm2 reload ecosystem.config.js --env production',
-  //     'pre-setup': '',
-  //   },
-  // },
+  deploy: {
+    production: {
+      user: 'root',
+      host: '124.70.179.101',
+      ref: 'origin/master',
+      repo: 'git@github.com:xiawang1024/nextjs-postcss.git',
+      path: '/root/www/next',
+      'post-deploy':
+        'cnpm install && pm2 reload ecosystem.config.js --env production',
+    },
+  },
 }
