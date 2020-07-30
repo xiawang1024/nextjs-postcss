@@ -25,13 +25,13 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'root',
-      host: '124.70.179.101',
+      user: 'xiawang1024',
+      host: ['35.200.12.114'],
       ref: 'origin/master',
       repo: 'git@github.com:xiawang1024/nextjs-postcss.git',
-      path: '/root/www/next',
+      path: '~/www/next',
       'post-deploy':
-        'cnpm install && pm2 reload ecosystem.config.js --env production',
+        'npm install && npm run build && pm2 reload ecosystem.config.js --env production',
     },
   },
 }
